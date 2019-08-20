@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edamam Recipe API</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="edamam.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <h1 id="edamam">EDAMAM Recipes</h1>
+
+    
+    <div class="wrapper">
+        <div class="controls">
+            <!--Search Form-->
+            <form>
+                <!-- Search Box w/ Submit button -->
+                <div class="wrap">
+                    <div class="searchNav">
+                        <input type="text" id="search" class="search" placeholder="What recipe are you looking for?">
+                        <button type="submit" class="submit">
+                            <img id="imgSearch" src="./assests/searchIcon.png" alt="">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="parameters">Recipe Parameters: <input type="checkbox" id="parameterCheck" onclick="recipeSearch()">
+                    <!-- class="col-sm-4" -->
+                    <!-- CheckBoxes -->
+                    <!-- <div>Alcohol-Free: <input type="checkbox" id="healthAlcoholFree" class="uncheck"></div>
+                    <div>Balanced: <input type="checkbox" id="dietBalanced" value="balanced" class="uncheck"></div>
+                    <div>High-Fiber: <input type="checkbox" id="dietHighFiber" class="uncheck"></div>
+                    <div>High-Protein: <input type="checkbox" id="dietHighProtein" class="uncheck"></div> -->
+                    <div id='left'>
+                            <ul id="parameterTable" >
+                                <!-- class="col-sm-4" -->
+                                <li title="No alcohol used or contained">Alcohol-Free: <input type="checkbox" id="healthAlcoholFree" class="uncheck">
+                                </li>
+                                
+                                <li title="Protein/Fat/Carb values in 15/35/50 ratio">Balanced: <input type="checkbox" id="dietBalanced" value="balanced" class="uncheck"></li>
+                            
+                                <li title="More than 5g fiber per serving">High-Fiber: <input type="checkbox" id="dietHighFiber" class="uncheck"></li>
+                            
+                                <li title="More than 50% of total calories from proteins">High-Protein: <input type="checkbox" id="dietHighProtein" class="uncheck"></li>
+                            </ul>
+                        </div>
+                        <div id='center'>
+                            <ul>
+                                <li title="Less than 20% of total calories from carbs">Low-Carb: <input type="checkbox" id="dietLowCarb" class="uncheck"></li>
+                            
+                                <li title="Less than 15% of total calories from fat">Low-Fat: <input type="checkbox" id="dietLowFat" class="uncheck"></li>
+                            
+                                <li title="No peanuts or products containing peanuts">Peanut-Free: <input type="checkbox" id="healthPeanutFree" class="uncheck"></li>
+                            
+                                <li title="Less than 4g of sugar per serving">Sugar-Conscious: <input type="checkbox" id="healthSugarConscious" class="uncheck"></li>
+                            </ul>
+                        </div>
+                        <div id="right">
+                            <ul>
+                                <li title="No tree nuts or products containing tree nuts">Tree Nut-Free: <input type="checkbox" id="healthTreeNutFree" class="uncheck"></li>
+                            
+                                <li title="No meat, poultry, fish, dairy, eggs or honey">Vegan: <input type="checkbox" id="healthVegan" class="uncheck"></li>
+                            
+                                <li title="No meat, poultry, or fish">Vegetarian: <input type="checkbox" id="healthVegetarian" class="uncheck"></li>
+                            </ul>
+                        </div>
+                    <!-- style="display:none" -->
+                    
+                    <p>
+                        <input type="button" onclick="uncheckAll()" class="btn btn-link" value="Uncheck All" >
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Results Section-->
+    <div class="results">
+            <!--Results Navigation-->
+        <nav>
+            <button class="prev">Previous 10</button>
+            <button class="next">Next 10</button>
+        </nav>
+    <!--Results From Request-->
+    <section>
+
+    </section>
+
+    
+    <script src="edamam.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

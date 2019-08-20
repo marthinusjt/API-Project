@@ -1,0 +1,90 @@
+/* GOOGLE FONT SHORTCUT
+
+font-family: 'Leckerli One', cursive;
+
+*/
+
+
+body {
+    font-family: 'Leckerli One', cursive;
+}
+
+#edamam {
+    font-size: 4em;
+    color: yellowgreen;
+}
+
+#parameters {
+    text-align: center;
+    font-size: 2em;
+    
+}
+
+#left {
+    justify-content: left;
+}
+
+ul {
+    /* text-align: left; */
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+}
+
+#parameterCheck {
+    height: 20px;
+    width: 20px;
+}
+
+.uncheck {
+    height: 20px;
+    width: 20px;
+}
+
+.searchNav {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+.search {
+    width: 50%;
+    border: 3px solid yellowgreen;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+  
+.search:focus{
+    color: yellowgreen;
+}
+  
+.submit {
+    width: 40px;
+    height: 36px;
+    border: 1px solid yellowgreen;
+    background: yellowgreen;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+#imgSearch {
+    width: 30px;
+    height: 30px;
+}
+
+  /*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 40%;
+    position: absolute;
+    justify-content: center;
+    top: 4%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+}
