@@ -18,11 +18,12 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER -->    
     <h1 id="edamam">EDAMAM Recipes</h1>
-
+    
     
     <div class="wrapper">
+            
         <div class="controls">
             <!--Search Form-->
             <form>
@@ -39,48 +40,33 @@
                 <div id="parameters">Recipe Parameters: <input type="checkbox" id="parameterCheck" onclick="recipeSearch()">
                     <!-- class="col-sm-4" -->
                     <!-- CheckBoxes -->
-                    <!-- <div>Alcohol-Free: <input type="checkbox" id="healthAlcoholFree" class="uncheck"></div>
-                    <div>Balanced: <input type="checkbox" id="dietBalanced" value="balanced" class="uncheck"></div>
-                    <div>High-Fiber: <input type="checkbox" id="dietHighFiber" class="uncheck"></div>
-                    <div>High-Protein: <input type="checkbox" id="dietHighProtein" class="uncheck"></div> -->
-                    <div id='left'>
-                            <ul id="parameterTable" >
-                                <!-- class="col-sm-4" -->
-                                <li title="No alcohol used or contained">Alcohol-Free: <input type="checkbox" id="healthAlcoholFree" class="uncheck">
-                                </li>
-                                
-                                <li title="Protein/Fat/Carb values in 15/35/50 ratio">Balanced: <input type="checkbox" id="dietBalanced" value="balanced" class="uncheck"></li>
-                            
-                                <li title="More than 5g fiber per serving">High-Fiber: <input type="checkbox" id="dietHighFiber" class="uncheck"></li>
-                            
-                                <li title="More than 50% of total calories from proteins">High-Protein: <input type="checkbox" id="dietHighProtein" class="uncheck"></li>
-                            </ul>
-                        </div>
-                        <div id='center'>
-                            <ul>
-                                <li title="Less than 20% of total calories from carbs">Low-Carb: <input type="checkbox" id="dietLowCarb" class="uncheck"></li>
-                            
-                                <li title="Less than 15% of total calories from fat">Low-Fat: <input type="checkbox" id="dietLowFat" class="uncheck"></li>
-                            
-                                <li title="No peanuts or products containing peanuts">Peanut-Free: <input type="checkbox" id="healthPeanutFree" class="uncheck"></li>
-                            
-                                <li title="Less than 4g of sugar per serving">Sugar-Conscious: <input type="checkbox" id="healthSugarConscious" class="uncheck"></li>
-                            </ul>
-                        </div>
-                        <div id="right">
-                            <ul>
-                                <li title="No tree nuts or products containing tree nuts">Tree Nut-Free: <input type="checkbox" id="healthTreeNutFree" class="uncheck"></li>
-                            
-                                <li title="No meat, poultry, fish, dairy, eggs or honey">Vegan: <input type="checkbox" id="healthVegan" class="uncheck"></li>
-                            
-                                <li title="No meat, poultry, or fish">Vegetarian: <input type="checkbox" id="healthVegetarian" class="uncheck"></li>
-                            </ul>
-                        </div>
                     <!-- style="display:none" -->
-                    
-                    <p>
-                        <input type="button" onclick="uncheckAll()" class="btn btn-link" value="Uncheck All" >
-                    </p>
+                    <div id="parameterTable" style="display:none">
+                        <div title="No alcohol used or contained">Alcohol-Free: <input type="checkbox" id="healthAlcoholFree" class="uncheck"></div>
+                        <br>
+                        <div title="Protein/Fat/Carb values in 15/35/50 ratio">Balanced: <input type="checkbox" id="dietBalanced" value="balanced" class="uncheck"></div>
+                        <br>
+                        <div title="More than 50% of total calories from proteins">High-Protein: <input type="checkbox" id="dietHighProtein" class="uncheck"></div>
+                        <br>
+                        <div title="Less than 20% of total calories from carbs">Low-Carb: <input type="checkbox" id="dietLowCarb" class="uncheck"></div>
+                        <br>
+                        <div title="Less than 15% of total calories from fat">Low-Fat: <input type="checkbox" id="dietLowFat" class="uncheck"></div>
+                        <br>
+                        <div title="No peanuts or products containing peanuts">Peanut-Free: <input type="checkbox" id="healthPeanutFree" class="uncheck"></div>
+                        <br>
+                        <div title="Less than 4g of sugar per serving">Sugar-Conscious: <input type="checkbox" id="healthSugarConscious" class="uncheck"></div>
+                        <br>
+                        <div title="No tree nuts or products containing tree nuts">Tree Nut-Free: <input type="checkbox" id="healthTreeNutFree" class="uncheck"></div>
+                        <br>
+                        <div title="No meat, poultry, fish, dairy, eggs or honey">Vegan: <input type="checkbox" id="healthVegan" class="uncheck"></div>
+                        <br>
+                        <div title="No meat, poultry, or fish">Vegetarian: <input type="checkbox" id="healthVegetarian" class="uncheck"></div>
+                    </div>
+                    <div>
+                        <p class="btnC">
+                            <input type="button" onclick="uncheckAll()" class="btn btn-link" value="Uncheck All" >
+                        </p>
+                    </div>
                 </div>
             </form>
         </div>
@@ -89,7 +75,7 @@
     <!--Results Section-->
     <div class="results">
             <!--Results Navigation-->
-        <nav>
+        <nav id="prevNext" class="sticky-top">
             <button class="prev">Previous 10</button>
             <button class="next">Next 10</button>
         </nav>

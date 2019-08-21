@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "jsaug2019-api-edamam"
+    "default": "jsaug2019-api-edamam",
+    "edamam": "jsaug2019-api-edamam"
   }
 }

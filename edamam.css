@@ -7,28 +7,29 @@ font-family: 'Leckerli One', cursive;
 
 body {
     font-family: 'Leckerli One', cursive;
+    background-image: url(./assests/prepBckg.jpg);
+    background-size: cover;
+    background-attachment: fixed;    
 }
 
 #edamam {
     font-size: 4em;
-    color: yellowgreen;
+    color: forestgreen;
 }
 
 #parameters {
+    font-size: 1.5em;
+    position: relative;
     text-align: center;
-    font-size: 2em;
-    
 }
 
-#left {
-    justify-content: left;
-}
-
-ul {
-    /* text-align: left; */
-    margin-left: auto;
-    margin-right: auto;
-    list-style-type: none;
+#parameterTable {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 #parameterCheck {
@@ -49,7 +50,7 @@ ul {
   
 .search {
     width: 50%;
-    border: 3px solid yellowgreen;
+    border: 3px solid forestgreen;
     border-right: none;
     padding: 5px;
     height: 36px;
@@ -59,14 +60,14 @@ ul {
 }
   
 .search:focus{
-    color: yellowgreen;
+    color: forestgreen;
 }
   
 .submit {
     width: 40px;
     height: 36px;
-    border: 1px solid yellowgreen;
-    background: yellowgreen;
+    border: 1px solid forestgreen;
+    background: forestgreen;
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;
@@ -88,3 +89,70 @@ ul {
     left: 50%;
     transform: translate(-30%, -50%);
 }
+
+/* SECTION RESULTS */
+.results {
+    width: 70%;
+    margin: 0 auto;
+    /* display: flex; */
+  }
+
+article {
+    /* display: flex; */
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(67,165,9, .1);
+    border: 2px solid forestgreen;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.recipeImage {
+    
+    float: right;
+    margin-left: 20px;
+    max-width: 300px;
+    max-height: 300px;
+    /* border-radius: 45%; */
+    /* position: relative; */
+}
+
+.ingredients {
+    
+    font-size: 1.3em;
+}
+
+.calories {
+    font-size: 1.1em;
+}
+
+.serves {
+    font-size: 1.1em;
+}
+
+.prevNext {
+    position: fixed;
+    top: 0;
+}
+
+.prev {
+    float: left;
+}
+  
+.next {
+    float: right;
+}
+
+
+.header {
+    font-size: 3em;
+}
+

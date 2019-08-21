@@ -60,7 +60,7 @@ function recipeSearch() {
     let checkBox = document.getElementById("parameterCheck");
     let dietParameters = document.getElementById("parameterTable");
     if (checkBox.checked == true){
-        dietParameters.style.display = "block";
+        dietParameters.style.display = "flex";
     } else {
         dietParameters.style.display = "none";
     }
@@ -165,6 +165,7 @@ function displayResults(json) {
 
             link.href = current.recipe.url;
             link.textContent = current.recipe.label;
+            link.setAttribute('target', '_blank');
 
             ingredients.textContent = 'Ingredients: ';
             ingredients.setAttribute('class', 'ingredients')
